@@ -9,7 +9,8 @@
     "lint": "eslint",
     "check-lint": "lint [0-9]*.js",
     "start-server": "nodemon --exec babel-node --presets @babel/preset-env ./server.js",
-    "start-worker": "nodemon --exec babel-node --presets @babel/preset-env ./worker.js"
+    "start-worker": "nodemon --exec babel-node --presets @babel/preset-env ./worker.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
