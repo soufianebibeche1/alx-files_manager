@@ -31,8 +31,8 @@
     "image-thumbnail": "^1.0.15",
     "is-base64": "^1.1.0",
     "mime-types": "^2.1.35",
-    "mongodb": "^6.8.0",
-    "redis": "^4.6.15",
+    "mongodb": "^3.7.4",
+    "redis": "^3.1.2",
     "sha1": "^1.1.1",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.13"
