@@ -1,9 +1,9 @@
 import mongodb from 'mongodb';
-import envLoader from './env_loader';
 import dotenv from 'dotenv';
+import envLoader from './env_loader';
 
 dotenv.config();
-envLoader(); // Ensure environment variables are loaded and validated
+envLoader();
 
 class DBClient {
   constructor() {
