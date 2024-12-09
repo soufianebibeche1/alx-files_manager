@@ -1,4 +1,5 @@
-import { MongoClient } from 'mongodb';
+import pkg from 'mongodb';
+const { MongoClient } = pkg;
 
 class DBClient {
   constructor() {
@@ -19,14 +20,16 @@ class DBClient {
   }
 
   isAlive() {
-    return this.client && this.client.isConnected();
+    return this.client && this.client.topology && this.client.topology.isConnected();
   }
 
   async nbUsers() {
+    if (!this.db) return 0;
     return this.db.collection('users').countDocuments();
   }
 
   async nbFiles() {
+    if (!this.db) return 0;
     return this.db.collection('files').countDocuments();
   }
 }
