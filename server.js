@@ -1,6 +1,6 @@
 import express from 'express';
-import envLoader from './utils/env_loader.js';
-import routes from './routes/index.js';
+import envLoader from './utils/env_loader';
+import routes from './routes/index';
 
 envLoader();
 
