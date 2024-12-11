@@ -1,15 +1,13 @@
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-function envLoader() {
+export default function envLoader() {
   const requiredVars = ['DB_HOST', 'DB_PORT', 'DB_DATABASE', 'PORT'];
   requiredVars.forEach((key) => {
     if (!process.env[key]) {
-      console.error(`Missing required environment variable: ${key}`);
+      console.error(Missing required environment variable: ${key});
       process.exit(1);
     }
   });
 }
-
-module.exports = envLoader;

@@ -1,6 +1,6 @@
-const express = require('express');
-const envLoader = require('./utils/env_loader');
-const routes = require('./routes/index');
+import express from 'express';
+import envLoader from './utils/env_loader';
+import routes from './routes/index';
 
 envLoader();
 
