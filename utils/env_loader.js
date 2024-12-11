@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 dotenv.config();
 
-export default function envLoader() {
+function envLoader() {
   const requiredVars = ['DB_HOST', 'DB_PORT', 'DB_DATABASE', 'PORT'];
   requiredVars.forEach((key) => {
     if (!process.env[key]) {
@@ -11,3 +11,5 @@ export default function envLoader() {
     }
   });
 }
+
+module.exports = envLoader;
